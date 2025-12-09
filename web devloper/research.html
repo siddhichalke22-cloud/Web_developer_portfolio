@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Jon Daniel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-content {
+            margin-left: 200px;
+            padding: 80px;
+            max-width: 1200px;
+        }
+        
+        .page-title {
+            font-size: 80px;
+            font-weight: 900;
+            color: #000;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .research-timeline {
+            margin-top: 60px;
+            position: relative;
+            padding-left: 60px;
+        }
+        
+        .research-timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .research-item {
+            background: #fff;
+            padding: 40px;
+            border-radius: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .research-item:hover {
+            transform: translateX(10px);
+        }
+        
+        .research-item::before {
+            content: '';
+            position: absolute;
+            left: -54px;
+            top: 50px;
+            width: 20px;
+            height: 20px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 0 0 4px #667eea;
+        }
+        
+        .research-year {
+            font-size: 18px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .research-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .research-description {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #666;
+        }
+        
+        .research-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .tag {
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar-nav">
+        <a href="aboutme.html" class="nav-item" data-testid="nav-about">About Me</a>
+        <a href="clients.html" class="nav-item" data-testid="nav-clients">Clients</a>
+        <a href="research.html" class="nav-item active" data-testid="nav-research">Research</a>
+        <a href="index.html" class="nav-item" data-testid="nav-portfolio">Portfolio</a>
+        <a href="podcast.html" class="nav-item" data-testid="nav-podcast">Podcast</a>
+    </nav>
+
+    <div class="page-content">
+        <h1 class="page-title" data-testid="page-title">Research</h1>
+        <p style="font-size: 20px; color: #666; margin-bottom: 20px;">Exploring the future of web development</p>
+        
+        <div class="research-timeline">
+            <div class="research-item" data-testid="research-item-1">
+                <div class="research-year">2024</div>
+                <h3 class="research-title">AI-Powered Design Systems</h3>
+                <p class="research-description">Investigating how artificial intelligence can automate and enhance design system creation, making them more adaptive and intelligent for modern web applications.</p>
+                <div class="research-tags">
+                    <span class="tag">AI/ML</span>
+                    <span class="tag">Design Systems</span>
+                    <span class="tag">Automation</span>
+                </div>
+            </div>
+            
+            <div class="research-item" data-testid="research-item-2">
+                <div class="research-year">2024</div>
+                <h3 class="research-title">WebAssembly Performance Optimization</h3>
+                <p class="research-description">Deep dive into WebAssembly performance patterns and optimization techniques for running compute-intensive applications in the browser at near-native speeds.</p>
+                <div class="research-tags">
+                    <span class="tag">WebAssembly</span>
+                    <span class="tag">Performance</span>
+                    <span class="tag">Browser Tech</span>
+                </div>
+            </div>
+            
+            <div class="research-item" data-testid="research-item-3">
+                <div class="research-year">2023</div>
+                <h3 class="research-title">Micro-Frontend Architecture</h3>
+                <p class="research-description">Research on scalable micro-frontend patterns for large enterprise applications, focusing on team autonomy and independent deployments.</p>
+                <div class="research-tags">
+                    <span class="tag">Architecture</span>
+                    <span class="tag">Scalability</span>
+                    <span class="tag">Micro-frontends</span>
+                </div>
+            </div>
+            
+            <div class="research-item" data-testid="research-item-4">
+                <div class="research-year">2023</div>
+                <h3 class="research-title">Accessibility in Modern Web Apps</h3>
+                <p class="research-description">Comprehensive study on implementing WCAG 2.2 standards in JavaScript-heavy applications, ensuring inclusive digital experiences for all users.</p>
+                <div class="research-tags">
+                    <span class="tag">Accessibility</span>
+                    <span class="tag">WCAG</span>
+                    <span class="tag">Inclusive Design</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

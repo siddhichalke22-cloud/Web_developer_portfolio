@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients - Jon Daniel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-content {
+            margin-left: 200px;
+            padding: 80px;
+            max-width: 1400px;
+        }
+        
+        .page-title {
+            font-size: 80px;
+            font-weight: 900;
+            color: #000;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .client-card {
+            background: #fff;
+            padding: 60px 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .client-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+        
+        .client-logo {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        
+        .client-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .client-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .client-card:nth-child(1) { background: linear-gradient(135deg, #ffeef8 0%, #fff 100%); }
+        .client-card:nth-child(2) { background: linear-gradient(135deg, #e0f7fa 0%, #fff 100%); }
+        .client-card:nth-child(3) { background: linear-gradient(135deg, #fff9c4 0%, #fff 100%); }
+        .client-card:nth-child(4) { background: linear-gradient(135deg, #f3e5f5 0%, #fff 100%); }
+        .client-card:nth-child(5) { background: linear-gradient(135deg, #e8f5e9 0%, #fff 100%); }
+        .client-card:nth-child(6) { background: linear-gradient(135deg, #ffe0b2 0%, #fff 100%); }
+    </style>
+</head>
+<body>
+    <nav class="sidebar-nav">
+        <a href="aboutme.html" class="nav-item" data-testid="nav-about">About Me</a>
+        <a href="clients.html" class="nav-item active" data-testid="nav-clients">Clients</a>
+        <a href="research.html" class="nav-item" data-testid="nav-research">Research</a>
+        <a href="index.html" class="nav-item" data-testid="nav-portfolio">Portfolio</a>
+        <a href="podcast.html" class="nav-item" data-testid="nav-podcast">Podcast</a>
+    </nav>
+
+    <div class="page-content">
+        <h1 class="page-title" data-testid="page-title">My Clients</h1>
+        <p style="font-size: 20px; color: #666; margin-bottom: 20px;">Trusted by leading companies worldwide</p>
+        
+        <div class="clients-grid">
+            <div class="client-card" data-testid="client-card-1">
+                <div class="client-logo">🍎</div>
+                <h3 class="client-name">TechCorp</h3>
+                <p class="client-description">Leading technology solutions provider. Built their complete web platform and mobile applications.</p>
+            </div>
+            
+            <div class="client-card" data-testid="client-card-2">
+                <div class="client-logo">🚀</div>
+                <h3 class="client-name">StartupHub</h3>
+                <p class="client-description">Innovation accelerator. Designed their startup ecosystem platform from ground up.</p>
+            </div>
+            
+            <div class="client-card" data-testid="client-card-3">
+                <div class="client-logo">🎨</div>
+                <h3 class="client-name">Creative Studio</h3>
+                <p class="client-description">Design agency. Created interactive portfolio showcasing their award-winning work.</p>
+            </div>
+            
+            <div class="client-card" data-testid="client-card-4">
+                <div class="client-logo">💼</div>
+                <h3 class="client-name">Global Finance</h3>
+                <p class="client-description">Financial services firm. Developed secure banking platform with modern UI/UX.</p>
+            </div>
+            
+            <div class="client-card" data-testid="client-card-5">
+                <div class="client-logo">🏫</div>
+                <h3 class="client-name">EduTech</h3>
+                <p class="client-description">E-learning platform. Built scalable education management system.</p>
+            </div>
+            
+            <div class="client-card" data-testid="client-card-6">
+                <div class="client-logo">✨</div>
+                <h3 class="client-name">Luxury Brands</h3>
+                <p class="client-description">Premium fashion brand. Crafted elegant e-commerce experience.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

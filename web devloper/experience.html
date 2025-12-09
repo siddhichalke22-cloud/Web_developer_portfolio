@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Jon Daniel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-content {
+            margin-left: 200px;
+            padding: 80px;
+            max-width: 1200px;
+        }
+        
+        .page-title {
+            font-size: 80px;
+            font-weight: 900;
+            color: #000;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .experience-timeline {
+            margin-top: 60px;
+            position: relative;
+            padding-left: 60px;
+        }
+        
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .experience-item {
+            background: #fff;
+            padding: 40px;
+            border-radius: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .experience-item:hover {
+            transform: translateX(10px);
+        }
+        
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -54px;
+            top: 50px;
+            width: 20px;
+            height: 20px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 0 0 4px #667eea;
+        }
+        
+        .experience-period {
+            font-size: 16px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .experience-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .experience-company {
+            font-size: 20px;
+            font-weight: 600;
+            color: #764ba2;
+            margin-bottom: 15px;
+        }
+        
+        .experience-description {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .experience-achievements {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .experience-achievements li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+        }
+        
+        .experience-achievements li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .stats-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+            margin-top: 40px;
+        }
+        
+        .stat-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-box h3 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        
+        .stat-box p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar-nav">
+        <a href="aboutme.html" class="nav-item" data-testid="nav-about">About Me</a>
+        <a href="clients.html" class="nav-item" data-testid="nav-clients">Clients</a>
+        <a href="research.html" class="nav-item" data-testid="nav-research">Research</a>
+        <a href="index.html" class="nav-item" data-testid="nav-portfolio">Portfolio</a>
+        <a href="podcast.html" class="nav-item" data-testid="nav-podcast">Podcast</a>
+    </nav>
+
+    <div class="page-content">
+        <h1 class="page-title" data-testid="page-title">Experience</h1>
+        <p style="font-size: 20px; color: #666; margin-bottom: 20px;">Building exceptional digital experiences for over 8 years</p>
+        
+        <div class="stats-summary">
+            <div class="stat-box" data-testid="stat-years">
+                <h3>8+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-box" data-testid="stat-projects">
+                <h3>172</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-box" data-testid="stat-clients">
+                <h3>50+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-box" data-testid="stat-awards">
+                <h3>25</h3>
+                <p>Awards Won</p>
+            </div>
+        </div>
+        
+        <div class="experience-timeline">
+            <div class="experience-item" data-testid="experience-item-1">
+                <div class="experience-period">2022 - PRESENT</div>
+                <h3 class="experience-title">Senior Full-Stack Developer</h3>
+                <div class="experience-company">TechVision Inc.</div>
+                <p class="experience-description">Leading development of enterprise-scale web applications and mentoring junior developers.</p>
+                <ul class="experience-achievements">
+                    <li>Architected and built scalable microservices platform serving 1M+ users</li>
+                    <li>Improved application performance by 60% through optimization</li>
+                    <li>Led team of 8 developers on multiple high-impact projects</li>
+                    <li>Implemented CI/CD pipelines reducing deployment time by 75%</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item" data-testid="experience-item-2">
+                <div class="experience-period">2019 - 2022</div>
+                <h3 class="experience-title">Full-Stack Developer</h3>
+                <div class="experience-company">Digital Innovations Co.</div>
+                <p class="experience-description">Developed and maintained multiple client-facing web applications using modern tech stack.</p>
+                <ul class="experience-achievements">
+                    <li>Built 30+ responsive web applications for diverse clients</li>
+                    <li>Integrated third-party APIs and payment systems</li>
+                    <li>Collaborated with design team to implement pixel-perfect UIs</li>
+                    <li>Reduced bug reports by 40% through comprehensive testing</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item" data-testid="experience-item-3">
+                <div class="experience-period">2017 - 2019</div>
+                <h3 class="experience-title">Frontend Developer</h3>
+                <div class="experience-company">Creative Web Studio</div>
+                <p class="experience-description">Focused on creating engaging user interfaces and interactive web experiences.</p>
+                <ul class="experience-achievements">
+                    <li>Developed responsive websites for 50+ clients</li>
+                    <li>Created reusable component library used across projects</li>
+                    <li>Implemented advanced CSS animations and transitions</li>
+                    <li>Maintained 95%+ cross-browser compatibility</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item" data-testid="experience-item-4">
+                <div class="experience-period">2016 - 2017</div>
+                <h3 class="experience-title">Junior Web Developer</h3>
+                <div class="experience-company">StartUp Labs</div>
+                <p class="experience-description">Began professional journey building websites and learning modern development practices.</p>
+                <ul class="experience-achievements">
+                    <li>Contributed to 15+ web development projects</li>
+                    <li>Learned and applied React, Node.js, and MongoDB</li>
+                    <li>Participated in code reviews and agile development</li>
+                    <li>Developed strong foundation in web technologies</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

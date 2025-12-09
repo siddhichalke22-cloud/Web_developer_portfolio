@@ -1,33 +1,127 @@
-<div class="class">
-        <div class="tag">
-            <nav class="nav">
-                <a class="navbar">Projects</a>
-                <a class="navbar">Portfolio</a>
-                <a class="navbar">Research</a>
-                <a class="navbar">Clients</a>
-                <a class="navbar">Skills</a>
-            </nav>
-        
-            <div class="tag1">
-                <div></div>
-            </div>
-            <div class="tag2">
-                <div></div>
-            </div>
-            <div class="tag3">
-                <div class="tag0 tag4">
-                    <div></div>
-                </div>
-                <div class="tag0 tag5">
-                    <div></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jon Daniel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Vertical Navigation Sidebar -->
+    <nav class="sidebar-nav">
+        <a href="aboutme.html" class="nav-item" data-testid="nav-about">About Me</a>
+        <a href="clients.html" class="nav-item" data-testid="nav-clients">Clients</a>
+        <a href="research.html" class="nav-item" data-testid="nav-research">Research</a>
+        <a href="index.html" class="nav-item active" data-testid="nav-portfolio">Portfolio</a>
+        <a href="podcast.html" class="nav-item" data-testid="nav-podcast">Podcast</a>
+    </nav>
 
+    <!-- Main Content Area -->
+    <div class="main-wrapper">
+        <!-- Left Section: Profile Card -->
+        <div class="left-section">
+            <div class="profile-card" data-testid="profile-card">
+                <div class="profile-content">
+                    <div class="profile-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Profile Picture" class="profile-image">
+                    </div>
+                    <div class="profile-text">
+                        <p class="intro">I'm,</p>
+                        <h1 class="name">Jon<br>Daniel</h1>
+                        <p class="email">inquiry@jondaniel.design</p>
+                    </div>
+                    <div class="profile-badge">
+                        <svg class="badge-icon" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="2"/>
+                            <text x="50" y="58" text-anchor="middle" fill="#fff" font-size="12" font-family="Arial">JON PORTFOLIO</text>
+                        </svg>
+                    </div>
                 </div>
             </div>
-            <div class="tag6">
-                <div></div> 
+        </div>
 
+        <!-- Right Section: Portfolio Title & Stats Grid -->
+        <div class="right-section">
+            <!-- Portfolio Title -->
+            <div class="portfolio-header">
+                <h2 class="portfolio-title" data-testid="portfolio-title">Portfolio</h2>
             </div>
-            <div >
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <!-- Row 1: Projects Card (spans 2 rows) + Languages Card -->
+                <div class="stat-card projects-card" data-testid="projects-card">
+                    <div class="card-content">
+                        <div class="video-container">
+                            <video class="coder-video" id="coderVideo" loop muted data-testid="coder-video">
+                                <source src="https://cdn.pixabay.com/video/2022/12/07/142127-778396014_large.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-overlay" id="playOverlay">
+                                <div class="play-icon">▶</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer mint">
+                        <h3 class="stat-number">251</h3>
+                        <p class="stat-label">Projects</p>
+                    </div>
+                </div>
+
+                <!-- Languages Card -->
+                <div class="stat-card languages-card" data-testid="languages-card" onclick="window.location.href='languages.html'">
+                    <div class="card-content centered">
+                        <div class="icon-wrapper">
+                            <svg class="card-icon" viewBox="0 0 100 100">
+                                <text x="50" y="60" text-anchor="middle" font-size="50" fill="#fff">&lt;/&gt;</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-footer purple">
+                        <h3 class="stat-number">156</h3>
+                        <p class="stat-label">Languages</p>
+                    </div>
+                </div>
+
+                <!-- Row 2: Clients Card + Experience Card -->
+                <div class="stat-card clients-card" data-testid="clients-card" onclick="window.location.href='clients.html'">
+                    <div class="card-content centered dark">
+                        <svg class="apple-icon" viewBox="0 0 100 100" fill="#fff">
+                            <path d="M50 10 C40 10 35 15 35 25 C35 35 40 40 50 40 C60 40 65 35 65 25 C65 15 60 10 50 10 Z M30 50 C20 50 15 55 15 65 C15 75 20 85 35 85 L65 85 C80 85 85 75 85 65 C85 55 80 50 70 50 Z"/>
+                        </svg>
+                    </div>
+                    <div class="card-footer-text">
+                        <p class="stat-label-white">Clients</p>
+                    </div>
+                </div>
+
+                <!-- Experience Card -->
+                <div class="stat-card experience-card" data-testid="experience-card" onclick="window.location.href='experience.html'">
+                    <div class="card-content centered black">
+                        <div class="spiral-icon">
+                            <svg viewBox="0 0 100 100" class="spiral-svg">
+                                <path d="M50,50 Q60,30 70,40 T80,60 T70,75 T50,75 T35,65 T30,45 T40,30" 
+                                      fill="none" stroke="url(#blueGradient)" stroke-width="3"/>
+                                <defs>
+                                    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#4F9FFF;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#00D4FF;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="50" cy="40" r="3" fill="#4F9FFF"/>
+                                <circle cx="65" cy="50" r="3" fill="#00D4FF"/>
+                                <circle cx="50" cy="65" r="3" fill="#4F9FFF"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-footer orange">
+                        <h3 class="stat-number">172</h3>
+                        <p class="stat-label">Experience</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
