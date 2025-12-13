@@ -549,3 +549,20 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+.image-wrapper {
+    padding: 0;
+    overflow: hidden;
+    height: calc(100% - 80px);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.stat-card:hover .card-image {
+    transform: scale(1.1);
+}
