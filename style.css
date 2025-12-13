@@ -4,12 +4,71 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-gradient-start: #f5f7fa;
+    --bg-gradient-end: #e8edf2;
+    --text-color: #333;
+    --text-headings: #000;
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+    --bg-gradient-start: #1a1a2e;
+    --bg-gradient-end: #16213e;
+    --text-color: #e0e0e0;
+    --text-headings: #ffffff;
+    --nav-bg: rgba(26, 26, 46, 0.95);
+    --card-shadow: rgba(0, 0, 0, 0.3);
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e8edf2 100%);
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    color: var(--text-color);
     min-height: 100vh;
     overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
 }
+
+/* Dark Mode Specific Overrides */
+.dark-mode .nav-item {
+    color: var(--text-color);
+}
+
+.dark-mode .portfolio-title {
+    color: var(--text-headings);
+}
+
+.dark-mode .profile-text {
+    color: #fff;
+    /* Keep white for gradient background */
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    z-index: 1001;
+    background: var(--nav-bg);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px var(--card-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
 
 
 .sidebar-nav {
@@ -21,10 +80,10 @@ body {
     flex-direction: column;
     gap: 50px;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--nav-bg);
     padding: 30px 15px;
     border-radius: 25px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 40px var(--card-shadow);
 }
 
 .nav-item {
@@ -141,8 +200,13 @@ body {
 }
 
 @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .badge-icon {
@@ -166,7 +230,7 @@ body {
 .portfolio-title {
     font-size: 100px;
     font-weight: 900;
-    color: #000;
+    color: var(--text-headings);
     letter-spacing: -3px;
     line-height: 0.9;
 }
@@ -228,7 +292,7 @@ body {
 .card-content.black {
     background: #000;
     position: relative;
-    
+
 }
 
 .video-container {
@@ -314,8 +378,15 @@ body {
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
 }
 
 
@@ -341,7 +412,7 @@ body {
 .card-footer.orange {
     background: linear-gradient(135deg, #ffb347 0%, #ff9f47 100%);
     position: relative;
-   
+
 }
 
 .card-footer-text {
@@ -351,7 +422,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .stat-number {
@@ -381,11 +452,11 @@ body {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .right-section {
         width: 100%;
     }
-    
+
     .portfolio-title {
         font-size: 80px;
     }
@@ -396,16 +467,16 @@ body {
         margin-left: 100px;
         padding: 40px 30px;
     }
-    
+
     .profile-card {
         width: 400px;
         height: 580px;
     }
-    
+
     .portfolio-title {
         font-size: 70px;
     }
-    
+
     .stats-grid {
         max-width: 700px;
     }
@@ -417,39 +488,40 @@ body {
         padding: 20px 10px;
         gap: 30px;
     }
-    
+
     .main-wrapper {
         margin-left: 80px;
         padding: 30px 20px;
     }
-    
+
     .profile-card {
         width: 100%;
         max-width: 380px;
         height: 520px;
     }
-    
+
     .portfolio-title {
         font-size: 50px;
     }
-    
+
     .stats-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
-    
+
     .projects-card {
         grid-row: span 1;
         min-height: 400px;
     }
 }
-.stat-number{
+
+.stat-number {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.stat-label{
+.stat-label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -457,14 +529,16 @@ body {
 
 /* Video Card Styles */
 .video-card {
-    height: 237px; /* Match height of other cards */
+    height: 237px;
+    /* Match height of other cards */
     overflow: hidden;
 }
 
 .video-wrapper {
     padding: 0;
     background: #000;
-    height: calc(100% - 80px); /* 237 - 80 for footer */
+    height: calc(100% - 80px);
+    /* 237 - 80 for footer */
     display: flex;
     justify-content: center;
     align-items: center;
