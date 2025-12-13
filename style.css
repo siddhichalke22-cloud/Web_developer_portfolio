@@ -527,10 +527,8 @@ body {
     align-items: center;
 }
 
-/* Video Card Styles */
 .video-card {
     height: 237px;
-    /* Match height of other cards */
     overflow: hidden;
 }
 
@@ -538,7 +536,6 @@ body {
     padding: 0;
     background: #000;
     height: calc(100% - 80px);
-    /* 237 - 80 for footer */
     display: flex;
     justify-content: center;
     align-items: center;
